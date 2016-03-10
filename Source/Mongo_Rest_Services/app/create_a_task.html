@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>create a task list</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<div  ng-controller="createtodolistCntrl">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-3 col-md-6">
+				<center><h1>Create a household task list</h1></center>
+			</div>
+
+		<div class="row">
+			<div class="col-md-offset-3 col-md-6">
+				<h2> </h2>
+			</div>
+
+		<div class="row">
+		  	<div class="col-md-offset-3 col-md-6">
+
+				  <form class="text-center" id="new-todo">
+				    	<div class="form-group">
+				      		<input class="form-control" ng-model="task.name" placeholder="Title of your household task" autofocus>
+				    	</div>
+				    	<div class="form-group">
+				    		<input class="form-control" ng-model="task.details" placeholder="Details of your task">
+				    	</div>
+				    	<div class="form-group">
+				        	<input type="submit" ng-click="createTask(task)" class="btn btn-success" value="Add to task list">
+				      </div>
+				  </form>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<ul class="listitem">
+				<li class="list"></li>
+				
+			</ul>
+		</div>
+	</div>
+	<script type="text/template" id="todo-template">
+    	<div class="todo">
+     		 <p>
+        		<span class="todo-text"><%= name %> - <%= desc %></span>
+        		&nbsp;
+        		<button type="button" class="close delete" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      		</p>
+      		<hr>
+    	</div>
+  	</script>
+
+	  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	  <script type="text/javascript" src="script.js"></script>
+	</div>
+	</div>
+</div>
+</body>
+</html>
